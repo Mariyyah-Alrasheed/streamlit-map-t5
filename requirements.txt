@@ -3,4 +3,9 @@ geopandas
 leafmap
 owslib
 streamlit
-setuptools 
+setuptools
+numpy
+opencv-python
+rasterio
+tensorflow
+h5py
