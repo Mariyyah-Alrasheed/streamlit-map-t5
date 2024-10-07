@@ -9,3 +9,4 @@ opencv-python-headless
 rasterio
 tensorflow
 h5py
+localtileserver 
