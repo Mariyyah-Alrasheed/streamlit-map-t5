@@ -17,6 +17,13 @@ os.makedirs("./uploaded_files/output_tif/", exist_ok=True)
 def download_from_drive(file_id, output):
     gdown.download(f"https://drive.google.com/uc?id={file_id}", output, quiet=False)
 
+
+model_file_id = '1_9hyfG-0xbrAaAD3Yo7Hdhh9s-63EMl0'  # Replace with your model file ID
+model_output_path = './unet_model_3k.keras'  # Desired name for the model file
+
+# Download the model from Google Drive
+download_from_drive(model_file_id, model_output_path)
+
 # Load your pre-trained model
 model = load_model('./unet_model_3k.keras')
 
