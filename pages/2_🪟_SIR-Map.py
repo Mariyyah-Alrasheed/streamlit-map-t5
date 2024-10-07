@@ -18,11 +18,11 @@ def download_from_drive(file_id, output):
     gdown.download(f"https://drive.google.com/uc?id={file_id}", output, quiet=False)
 
 
-model_file_id = '1_9hyfG-0xbrAaAD3Yo7Hdhh9s-63EMl0'  # Your model file ID
-model_output_path = './unet_model_3k.keras'  # Desired name for the model file
+# model_file_id = '1_9hyfG-0xbrAaAD3Yo7Hdhh9s-63EMl0'  # Your model file ID
+model_output_path = 'C:\Users\Mary\streamlit-map-t5\unet_model_3k.keras'  # Desired name for the model file
 
 # Download the model from Google Drive
-download_from_drive(model_file_id, model_output_path)
+# download_from_drive(model_file_id, model_output_path)
 
 # Load your pre-trained model
 model = load_model(model_output_path)
