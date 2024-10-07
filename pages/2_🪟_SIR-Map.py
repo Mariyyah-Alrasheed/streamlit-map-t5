@@ -18,14 +18,14 @@ def download_from_drive(file_id, output):
     gdown.download(f"https://drive.google.com/uc?id={file_id}", output, quiet=False)
 
 
-model_file_id = '1_9hyfG-0xbrAaAD3Yo7Hdhh9s-63EMl0'  # Replace with your model file ID
+model_file_id = '1_9hyfG-0xbrAaAD3Yo7Hdhh9s-63EMl0'  # Your model file ID
 model_output_path = './unet_model_3k.keras'  # Desired name for the model file
 
 # Download the model from Google Drive
 download_from_drive(model_file_id, model_output_path)
 
 # Load your pre-trained model
-model = load_model('./unet_model_3k.keras')
+model = load_model(model_output_path)
 
 # Function for extracting the predicted image
 def predict_from_tif(model, tif_file_path):
